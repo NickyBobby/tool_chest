@@ -1,0 +1,5 @@
+<div class="tool_info">
+  <h1><%= @tool.name %> - <%= @tool.quantity %></h1>
+  <h3><%= @tool.formatted_price %></h3>
+  <h4><%= link_to "Delete", tool_path(@tool), method: :delete %> <%= link_to "Update", edit_tool_path(@tool) %></h4>
+</div>

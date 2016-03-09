@@ -1,0 +1,8 @@
+<h1>User Tool Page</h1>
+<div class="user_tool_info">
+  <% @user.tools.each do |tool| %>
+    <h4><%= tool.name %> - <%= tool.formatted_price %> - <%= tool.quantity %></h4>
+  <% end %>
+</div>
+
+<h4><%= link_to "Create a new tool", new_tool_path %></h4>

@@ -1,0 +1,10 @@
+<h1>Welcome to Tool Chest!</h1>
+<h4><%= link_to "Create Account", new_user_path %></h4>
+<h4><%= link_to "Login", login_path %></h4>
+<% if current_user %>
+  <h4><h4><%= link_to "Create Tool", new_tool_path %></h4></h4>
+<% end %>
+
+<% @tools.each do |tool| %>
+  <h3><%= tool.name %> - <%= tool.quantity %> <%= link_to "Link to View #{tool.name}", tool_path(tool.id) %></h3>
+<% end %>
